@@ -1,0 +1,52 @@
+[
+  {
+    "sizeLabel": "100 B",
+    "bytesCount": 100,
+    "jsFastDiffMs": 0.2033,
+    "jsGoogleDmpMs": 0.1105,
+    "wasmEncodeCopyAllocMs": 0.2132,
+    "wasmDiffComputeMs": 0.0118,
+    "wasmTotalEndToEndMs": 0.0158,
+    "boundaryOverheadPercent": 1349.4
+  },
+  {
+    "sizeLabel": "1 KB",
+    "bytesCount": 1000,
+    "jsFastDiffMs": 0.0783,
+    "jsGoogleDmpMs": 0.0074,
+    "wasmEncodeCopyAllocMs": 0.0056,
+    "wasmDiffComputeMs": 0.0645,
+    "wasmTotalEndToEndMs": 0.076,
+    "boundaryOverheadPercent": 7.4
+  },
+  {
+    "sizeLabel": "10 KB",
+    "bytesCount": 10000,
+    "jsFastDiffMs": 0.647,
+    "jsGoogleDmpMs": 0.1015,
+    "wasmEncodeCopyAllocMs": 0.0186,
+    "wasmDiffComputeMs": 0.1394,
+    "wasmTotalEndToEndMs": 0.1688,
+    "boundaryOverheadPercent": 11
+  },
+  {
+    "sizeLabel": "100 KB",
+    "bytesCount": 100000,
+    "jsFastDiffMs": 0.022,
+    "jsGoogleDmpMs": 0.0258,
+    "wasmEncodeCopyAllocMs": 0.0763,
+    "wasmDiffComputeMs": 0.2626,
+    "wasmTotalEndToEndMs": 0.3897,
+    "boundaryOverheadPercent": 19.6
+  },
+  {
+    "sizeLabel": "500 KB",
+    "bytesCount": 500000,
+    "jsFastDiffMs": 0.1251,
+    "jsGoogleDmpMs": 0.0843,
+    "wasmEncodeCopyAllocMs": 0.3203,
+    "wasmDiffComputeMs": 0.3693,
+    "wasmTotalEndToEndMs": 0.5482,
+    "boundaryOverheadPercent": 58.4
+  }
+]

@@ -1,0 +1,6 @@
+Internationalization:
+1. Emojis: 🚀 ✨ 🪐 🧮 👨‍👩‍👧‍👦 🇻🇳 🇯🇵
+2. CJK: 東京は日本の首都です。道可道，非常道。
+3. RTL: مرحبا بالعالم العربي / שלום עולם
+4. Diacritics: Tiếng Việt có dấu: Phở bò tái nạm, café au lait
+5. Math SMP: 𝕏 ⊂ 𝕐, 𝔄 ⊗ 𝔅

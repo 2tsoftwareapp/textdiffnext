@@ -1,0 +1,6 @@
+Header
+Line 1
+Line 2 (edited)
+Line 3
+Line 4
+NoTrailingNewline

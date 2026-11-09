@@ -1,0 +1,9 @@
+{
+  "name": "TextDiffNext",
+  "version": "0.1.0",
+  "author": "Hermes",
+  "private": true,
+  "dependencies": {
+    "dmp": "^1.0.5"
+  }
+}

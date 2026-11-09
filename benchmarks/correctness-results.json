@@ -1,0 +1,609 @@
+{
+  "results": [
+    {
+      "scenario": "Prose Short",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 488,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Prose Short",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 488,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Prose Short",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 825,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Prose Short",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Prose Long",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 13816,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Prose Long",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 13816,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Prose Long",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 29187,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Prose Long",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Code Short",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 627,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Code Short",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 627,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Code Short",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 864,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Code Short",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Code Long",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 9859,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Code Long",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 9857,
+      "patchRoundtripOk": false,
+      "notes": ""
+    },
+    {
+      "scenario": "Code Long",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 13234,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Code Long",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Data JSON Short",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 284,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Data JSON Short",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 284,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Data JSON Short",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 434,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Data JSON Short",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Data JSON Long",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 24038,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Data JSON Long",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 24038,
+      "patchRoundtripOk": false,
+      "notes": ""
+    },
+    {
+      "scenario": "Data JSON Long",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 27929,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Data JSON Long",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Markdown Dense",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 1085,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Markdown Dense",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 1085,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Markdown Dense",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 1256,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Markdown Dense",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Large File",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 9832,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Large File",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 9832,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Large File",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 48112,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Large File",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Repetitive Lines",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 89,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Repetitive Lines",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 89,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Repetitive Lines",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 834,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Repetitive Lines",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Sparse Edits",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 210,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Sparse Edits",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 210,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Sparse Edits",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 1192,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Sparse Edits",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Dense Edits",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 13670,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Dense Edits",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 13670,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Dense Edits",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 15716,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Dense Edits",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Completely Different",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 9203,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Completely Different",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 9203,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Completely Different",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 9246,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Completely Different",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Long Single Line",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 1499,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Long Single Line",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 1499,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Long Single Line",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 27896,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Long Single Line",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Unicode Heavy",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Patch error: String contained an illegal UTF-16 sequence."
+    },
+    {
+      "scenario": "Unicode Heavy",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Patch error: String contained an illegal UTF-16 sequence."
+    },
+    {
+      "scenario": "Unicode Heavy",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 894,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Unicode Heavy",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    },
+    {
+      "scenario": "Newline Edge Cases",
+      "engine": "Google DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 144,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Newline Edge Cases",
+      "engine": "Sanity DMP",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 144,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Newline Edge Cases",
+      "engine": "jsdiff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": true,
+      "patchSize": 266,
+      "patchRoundtripOk": true,
+      "notes": ""
+    },
+    {
+      "scenario": "Newline Edge Cases",
+      "engine": "fast-diff",
+      "diffOk": true,
+      "deterministic": true,
+      "patchGenerated": false,
+      "patchSize": 0,
+      "patchRoundtripOk": false,
+      "notes": "Diff-only engine (no match/patch API)"
+    }
+  ],
+  "fuzzyDrift": {
+    "GoogleDMP": true,
+    "SanityDMP": true,
+    "jsdiff": true
+  }
+}

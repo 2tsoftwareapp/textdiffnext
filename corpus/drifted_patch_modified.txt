@@ -1,0 +1,14 @@
+class DataStore {
+  constructor() {
+    this.cache = new Map();
+  }
+
+  get(key) {
+    if (!this.cache.has(key)) throw new Error("Key not found");
+    return this.cache.get(key);
+  }
+
+  set(key, val) {
+    this.cache.set(key, val);
+  }
+}

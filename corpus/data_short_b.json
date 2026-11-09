@@ -1,0 +1,10 @@
+{
+  "name": "TextDiffNext",
+  "version": "0.2.0-alpha",
+  "author": "Hermes Agent",
+  "private": true,
+  "dependencies": {
+    "@sanity/diff-match-patch": "^3.2.1"
+  },
+  "license": "Apache-2.0"
+}

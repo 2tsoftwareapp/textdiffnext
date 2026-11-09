@@ -1,0 +1,606 @@
+{
+  "runtime": "Bun 1.4.4",
+  "results": [
+    {
+      "scenario": "Prose Short",
+      "engine": "fast-diff",
+      "p50": 2.538,
+      "p95": 11.655,
+      "mean": 3.899,
+      "min": 0.824,
+      "max": 11.655,
+      "heapDeltaKB": 352
+    },
+    {
+      "scenario": "Prose Short",
+      "engine": "Google DMP",
+      "p50": 35.545,
+      "p95": 517.535,
+      "mean": 124.338,
+      "min": 8.351,
+      "max": 517.535,
+      "heapDeltaKB": 592
+    },
+    {
+      "scenario": "Prose Short",
+      "engine": "Sanity DMP",
+      "p50": 2.631,
+      "p95": 254.119,
+      "mean": 52.782,
+      "min": 1.971,
+      "max": 254.119,
+      "heapDeltaKB": 640
+    },
+    {
+      "scenario": "Prose Short",
+      "engine": "jsdiff",
+      "p50": 2.805,
+      "p95": 111.751,
+      "mean": 24.267,
+      "min": 1.21,
+      "max": 111.751,
+      "heapDeltaKB": 2016
+    },
+    {
+      "scenario": "Prose Long",
+      "engine": "fast-diff",
+      "p50": 634.909,
+      "p95": 758.414,
+      "mean": 644.879,
+      "min": 539.676,
+      "max": 758.414,
+      "heapDeltaKB": 3290
+    },
+    {
+      "scenario": "Prose Long",
+      "engine": "Google DMP",
+      "p50": 26.929,
+      "p95": 49.496,
+      "mean": 33.269,
+      "min": 26.498,
+      "max": 49.496,
+      "heapDeltaKB": 300
+    },
+    {
+      "scenario": "Prose Long",
+      "engine": "Sanity DMP",
+      "p50": 39.976,
+      "p95": 77.717,
+      "mean": 47.785,
+      "min": 35.528,
+      "max": 77.717,
+      "heapDeltaKB": 486
+    },
+    {
+      "scenario": "Prose Long",
+      "engine": "jsdiff",
+      "p50": 582.171,
+      "p95": 671.759,
+      "mean": 594.878,
+      "min": 564.148,
+      "max": 671.759,
+      "heapDeltaKB": 860
+    },
+    {
+      "scenario": "Code Short",
+      "engine": "fast-diff",
+      "p50": 0.634,
+      "p95": 0.746,
+      "mean": 0.659,
+      "min": 0.633,
+      "max": 0.746,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Code Short",
+      "engine": "Google DMP",
+      "p50": 0.654,
+      "p95": 0.983,
+      "mean": 0.749,
+      "min": 0.623,
+      "max": 0.983,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Code Short",
+      "engine": "Sanity DMP",
+      "p50": 0.649,
+      "p95": 1.146,
+      "mean": 0.777,
+      "min": 0.631,
+      "max": 1.146,
+      "heapDeltaKB": 154
+    },
+    {
+      "scenario": "Code Short",
+      "engine": "jsdiff",
+      "p50": 1.863,
+      "p95": 2.128,
+      "mean": 1.819,
+      "min": 1.516,
+      "max": 2.128,
+      "heapDeltaKB": 45
+    },
+    {
+      "scenario": "Code Long",
+      "engine": "fast-diff",
+      "p50": 127.613,
+      "p95": 189.751,
+      "mean": 140.149,
+      "min": 118.398,
+      "max": 189.751,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Code Long",
+      "engine": "Google DMP",
+      "p50": 3.328,
+      "p95": 3.764,
+      "mean": 2.995,
+      "min": 1.672,
+      "max": 3.764,
+      "heapDeltaKB": 76
+    },
+    {
+      "scenario": "Code Long",
+      "engine": "Sanity DMP",
+      "p50": 2.276,
+      "p95": 4.198,
+      "mean": 2.606,
+      "min": 1.975,
+      "max": 4.198,
+      "heapDeltaKB": 106
+    },
+    {
+      "scenario": "Code Long",
+      "engine": "jsdiff",
+      "p50": 687.251,
+      "p95": 740.2,
+      "mean": 683.692,
+      "min": 591.227,
+      "max": 740.2,
+      "heapDeltaKB": 2330
+    },
+    {
+      "scenario": "Data JSON Short",
+      "engine": "fast-diff",
+      "p50": 0.118,
+      "p95": 0.141,
+      "mean": 0.116,
+      "min": 0.089,
+      "max": 0.141,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Data JSON Short",
+      "engine": "Google DMP",
+      "p50": 0.143,
+      "p95": 0.233,
+      "mean": 0.164,
+      "min": 0.122,
+      "max": 0.233,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Data JSON Short",
+      "engine": "Sanity DMP",
+      "p50": 0.368,
+      "p95": 3.285,
+      "mean": 1.091,
+      "min": 0.216,
+      "max": 3.285,
+      "heapDeltaKB": 404
+    },
+    {
+      "scenario": "Data JSON Short",
+      "engine": "jsdiff",
+      "p50": 0.449,
+      "p95": 0.604,
+      "mean": 0.429,
+      "min": 0.223,
+      "max": 0.604,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Data JSON Long",
+      "engine": "fast-diff",
+      "p50": 480.629,
+      "p95": 514.972,
+      "mean": 479.484,
+      "min": 457.06,
+      "max": 514.972,
+      "heapDeltaKB": 3520
+    },
+    {
+      "scenario": "Data JSON Long",
+      "engine": "Google DMP",
+      "p50": 24.375,
+      "p95": 33.408,
+      "mean": 25.4,
+      "min": 21.865,
+      "max": 33.408,
+      "heapDeltaKB": 604
+    },
+    {
+      "scenario": "Data JSON Long",
+      "engine": "Sanity DMP",
+      "p50": 22.35,
+      "p95": 31.597,
+      "mean": 24.566,
+      "min": 20.153,
+      "max": 31.597,
+      "heapDeltaKB": 641
+    },
+    {
+      "scenario": "Data JSON Long",
+      "engine": "jsdiff",
+      "p50": 4401.031,
+      "p95": 4401.031,
+      "mean": 4401.031,
+      "min": 4401.031,
+      "max": 4401.031,
+      "heapDeltaKB": 0,
+      "timedOut": true
+    },
+    {
+      "scenario": "Markdown Dense",
+      "engine": "fast-diff",
+      "p50": 6.155,
+      "p95": 8.279,
+      "mean": 6.628,
+      "min": 5.728,
+      "max": 8.279,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Markdown Dense",
+      "engine": "Google DMP",
+      "p50": 9.529,
+      "p95": 17.909,
+      "mean": 10.793,
+      "min": 5.818,
+      "max": 17.909,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Markdown Dense",
+      "engine": "Sanity DMP",
+      "p50": 9.757,
+      "p95": 18.898,
+      "mean": 11.717,
+      "min": 7.588,
+      "max": 18.898,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Markdown Dense",
+      "engine": "jsdiff",
+      "p50": 21.243,
+      "p95": 31.679,
+      "mean": 23.046,
+      "min": 19.884,
+      "max": 31.679,
+      "heapDeltaKB": 353
+    },
+    {
+      "scenario": "Large File",
+      "engine": "fast-diff",
+      "p50": 149.742,
+      "p95": 277.197,
+      "mean": 163.136,
+      "min": 102.039,
+      "max": 277.197,
+      "heapDeltaKB": 10927
+    },
+    {
+      "scenario": "Large File",
+      "engine": "Google DMP",
+      "p50": 6.845,
+      "p95": 11.02,
+      "mean": 7.215,
+      "min": 4.932,
+      "max": 11.02,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Large File",
+      "engine": "Sanity DMP",
+      "p50": 7.009,
+      "p95": 13.659,
+      "mean": 7.622,
+      "min": 4.733,
+      "max": 13.659,
+      "heapDeltaKB": 814
+    },
+    {
+      "scenario": "Large File",
+      "engine": "jsdiff",
+      "p50": 798.01,
+      "p95": 1029.612,
+      "mean": 753.154,
+      "min": 454.851,
+      "max": 1029.612,
+      "heapDeltaKB": 310
+    },
+    {
+      "scenario": "Repetitive Lines",
+      "engine": "fast-diff",
+      "p50": 0.03,
+      "p95": 0.125,
+      "mean": 0.05,
+      "min": 0.02,
+      "max": 0.125,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Repetitive Lines",
+      "engine": "Google DMP",
+      "p50": 0.075,
+      "p95": 0.112,
+      "mean": 0.068,
+      "min": 0.022,
+      "max": 0.112,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Repetitive Lines",
+      "engine": "Sanity DMP",
+      "p50": 0.063,
+      "p95": 0.108,
+      "mean": 0.07,
+      "min": 0.044,
+      "max": 0.108,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Repetitive Lines",
+      "engine": "jsdiff",
+      "p50": 1.959,
+      "p95": 2.913,
+      "mean": 2.053,
+      "min": 1.463,
+      "max": 2.913,
+      "heapDeltaKB": 2234
+    },
+    {
+      "scenario": "Sparse Edits",
+      "engine": "fast-diff",
+      "p50": 0.052,
+      "p95": 0.096,
+      "mean": 0.061,
+      "min": 0.05,
+      "max": 0.096,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Sparse Edits",
+      "engine": "Google DMP",
+      "p50": 0.059,
+      "p95": 0.079,
+      "mean": 0.06,
+      "min": 0.048,
+      "max": 0.079,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Sparse Edits",
+      "engine": "Sanity DMP",
+      "p50": 0.059,
+      "p95": 0.082,
+      "mean": 0.063,
+      "min": 0.052,
+      "max": 0.082,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Sparse Edits",
+      "engine": "jsdiff",
+      "p50": 1.477,
+      "p95": 1.972,
+      "mean": 1.612,
+      "min": 1.369,
+      "max": 1.972,
+      "heapDeltaKB": 1845
+    },
+    {
+      "scenario": "Dense Edits",
+      "engine": "fast-diff",
+      "p50": 56.015,
+      "p95": 61.221,
+      "mean": 57.39,
+      "min": 55.176,
+      "max": 61.221,
+      "heapDeltaKB": 570
+    },
+    {
+      "scenario": "Dense Edits",
+      "engine": "Google DMP",
+      "p50": 68.614,
+      "p95": 73.314,
+      "mean": 68.679,
+      "min": 63.288,
+      "max": 73.314,
+      "heapDeltaKB": 616
+    },
+    {
+      "scenario": "Dense Edits",
+      "engine": "Sanity DMP",
+      "p50": 60.8,
+      "p95": 63.61,
+      "mean": 59.71,
+      "min": 53.96,
+      "max": 63.61,
+      "heapDeltaKB": 740
+    },
+    {
+      "scenario": "Dense Edits",
+      "engine": "jsdiff",
+      "p50": 321.857,
+      "p95": 949.707,
+      "mean": 438.906,
+      "min": 285.638,
+      "max": 949.707,
+      "heapDeltaKB": 4059
+    },
+    {
+      "scenario": "Completely Different",
+      "engine": "fast-diff",
+      "p50": 715.589,
+      "p95": 1493.618,
+      "mean": 829.631,
+      "min": 578.156,
+      "max": 1493.618,
+      "heapDeltaKB": 565
+    },
+    {
+      "scenario": "Completely Different",
+      "engine": "Google DMP",
+      "p50": 630.205,
+      "p95": 702.121,
+      "mean": 637.666,
+      "min": 582.103,
+      "max": 702.121,
+      "heapDeltaKB": 2185
+    },
+    {
+      "scenario": "Completely Different",
+      "engine": "Sanity DMP",
+      "p50": 610.682,
+      "p95": 733.963,
+      "mean": 631.73,
+      "min": 542.738,
+      "max": 733.963,
+      "heapDeltaKB": 2531
+    },
+    {
+      "scenario": "Completely Different",
+      "engine": "jsdiff",
+      "p50": 2314.527,
+      "p95": 2744.855,
+      "mean": 2391.343,
+      "min": 2056.059,
+      "max": 2744.855,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Long Single Line",
+      "engine": "fast-diff",
+      "p50": 4.524,
+      "p95": 9.613,
+      "mean": 5.665,
+      "min": 3.798,
+      "max": 9.613,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Long Single Line",
+      "engine": "Google DMP",
+      "p50": 4.015,
+      "p95": 4.704,
+      "mean": 3.735,
+      "min": 2.684,
+      "max": 4.704,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Long Single Line",
+      "engine": "Sanity DMP",
+      "p50": 2.869,
+      "p95": 5.11,
+      "mean": 3.21,
+      "min": 2.482,
+      "max": 5.11,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Long Single Line",
+      "engine": "jsdiff",
+      "p50": 6.699,
+      "p95": 10.715,
+      "mean": 7.436,
+      "min": 6.377,
+      "max": 10.715,
+      "heapDeltaKB": 408
+    },
+    {
+      "scenario": "Unicode Heavy",
+      "engine": "fast-diff",
+      "p50": 0.384,
+      "p95": 0.952,
+      "mean": 0.507,
+      "min": 0.357,
+      "max": 0.952,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Unicode Heavy",
+      "engine": "Google DMP",
+      "p50": 0.489,
+      "p95": 2.966,
+      "mean": 0.983,
+      "min": 0.443,
+      "max": 2.966,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Unicode Heavy",
+      "engine": "Sanity DMP",
+      "p50": 0.508,
+      "p95": 0.786,
+      "mean": 0.559,
+      "min": 0.435,
+      "max": 0.786,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Unicode Heavy",
+      "engine": "jsdiff",
+      "p50": 0.611,
+      "p95": 0.838,
+      "mean": 0.661,
+      "min": 0.605,
+      "max": 0.838,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Newline Edge Cases",
+      "engine": "fast-diff",
+      "p50": 0.022,
+      "p95": 0.376,
+      "mean": 0.095,
+      "min": 0.014,
+      "max": 0.376,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Newline Edge Cases",
+      "engine": "Google DMP",
+      "p50": 0.012,
+      "p95": 0.046,
+      "mean": 0.024,
+      "min": 0.01,
+      "max": 0.046,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Newline Edge Cases",
+      "engine": "Sanity DMP",
+      "p50": 0.02,
+      "p95": 0.085,
+      "mean": 0.03,
+      "min": 0.008,
+      "max": 0.085,
+      "heapDeltaKB": 0
+    },
+    {
+      "scenario": "Newline Edge Cases",
+      "engine": "jsdiff",
+      "p50": 0.017,
+      "p95": 0.042,
+      "mean": 0.022,
+      "min": 0.016,
+      "max": 0.042,
+      "heapDeltaKB": 0
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Internationalization & Localization (Updated):
+1. Emojis: 🚀 🌟 🪐 🧮 👨‍👩‍👦 🇻🇳 🇬🇧
+2. CJK: 京都は日本の古い文化首都です。道可道也，非恒道也。
+3. RTL: أهلاً وسهلاً بالعالم العربي / שלום לכולם
+4. Diacritics: Tiếng Việt chuẩn: Phở gà đặc biệt, café au lait (NFD)
+5. Math SMP: 𝕏 ⊆ 𝕐, 𝔄 ⊕ 𝔅
