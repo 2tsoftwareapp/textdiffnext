@@ -1,18 +1,32 @@
 {
   "name": "textdiffnext",
-  "module": "index.ts",
+  "version": "0.1.0",
   "type": "module",
-  "private": true,
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2tsoftwareapp/textdiffnext.git"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE", "THIRD-PARTY-NOTICES.md", "API-COMPATIBILITY.md", "UNICODE-SERIALIZATION-CONTRACT.md"],
+  "sideEffects": false,
   "scripts": {
+    "build": "bun build src/index.ts --target=node --format=esm --banner='/*! Copyright 2018 The diff-match-patch Authors. Apache-2.0. Derived from @sanity/diff-match-patch 3.2.1; modified by TextDiffNext. See LICENSE and THIRD-PARTY-NOTICES.md. */' --outfile=dist/index.js && bun build src/index.ts --target=node --format=cjs --banner='/*! Copyright 2018 The diff-match-patch Authors. Apache-2.0. Derived from @sanity/diff-match-patch 3.2.1; modified by TextDiffNext. See LICENSE and THIRD-PARTY-NOTICES.md. */' --outfile=dist/index.cjs && bunx tsc -p tsconfig.build.json",
+    "test:consumer": "bun tests/m3_consumer_integration.ts",
     "typecheck": "bun check"
   },
   "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^7"
-  },
-  "dependencies": {
+    "@types/bun": "latest",
+    "typescript": "^7",
     "@sanity/diff-match-patch": "^3.2.1",
     "diff": "^9.0.0",
     "diff-match-patch": "^1.0.5",
