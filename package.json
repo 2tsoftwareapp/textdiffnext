@@ -1,12 +1,26 @@
 {
   "name": "textdiffnext",
   "version": "0.1.0",
+  "description": "UTF-16-native diff, match and patch for JavaScript with exact Unicode patch round-trips",
   "type": "module",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/2tsoftwareapp/textdiffnext.git"
   },
+  "homepage": "https://github.com/2tsoftwareapp/textdiffnext#readme",
+  "bugs": {
+    "url": "https://github.com/2tsoftwareapp/textdiffnext/issues"
+  },
+  "keywords": [
+    "diff",
+    "patch",
+    "diff-match-patch",
+    "text-diff",
+    "fuzzy-match",
+    "unicode",
+    "utf-16"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
@@ -17,10 +31,18 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist", "README.md", "LICENSE", "THIRD-PARTY-NOTICES.md", "API-COMPATIBILITY.md", "UNICODE-SERIALIZATION-CONTRACT.md"],
+  "files": ["dist", "README.md", "CHANGELOG.md", "LICENSE", "THIRD-PARTY-NOTICES.md", "API-COMPATIBILITY.md", "UNICODE-SERIALIZATION-CONTRACT.md"],
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "build": "bun build src/index.ts --target=node --format=esm --banner='/*! Copyright 2018 The diff-match-patch Authors. Apache-2.0. Derived from @sanity/diff-match-patch 3.2.1; modified by TextDiffNext. See LICENSE and THIRD-PARTY-NOTICES.md. */' --outfile=dist/index.js && bun build src/index.ts --target=node --format=cjs --banner='/*! Copyright 2018 The diff-match-patch Authors. Apache-2.0. Derived from @sanity/diff-match-patch 3.2.1; modified by TextDiffNext. See LICENSE and THIRD-PARTY-NOTICES.md. */' --outfile=dist/index.cjs && bunx tsc -p tsconfig.build.json",
+    "build": "bun build src/index.ts --target=node --format=esm --banner='/*! Copyright 2018 The diff-match-patch Authors. Apache-2.0. Derived from @sanity/diff-match-patch 3.2.1; modified by TextDiffNext. See LICENSE and THIRD-PARTY-NOTICES.md. */' --outfile=dist/index.js && bun build src/index.ts --target=node --format=cjs --banner='/*! Copyright 2018 The diff-match-patch Authors. Apache-2.0. Derived from @sanity/diff-match-patch 3.2.1; modified by TextDiffNext. See LICENSE and THIRD-PARTY-NOTICES.md. */' --outfile=dist/index.cjs && bun x tsc -p tsconfig.build.json",
+    "prepack": "bun run build",
+    "test": "bun test",
     "test:consumer": "bun tests/m3_consumer_integration.ts",
     "typecheck": "bun check"
   },
