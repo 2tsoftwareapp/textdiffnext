@@ -8,10 +8,11 @@
 [![license](https://img.shields.io/badge/license-Apache--2.0-green.svg?style=flat-square)](LICENSE)
 [![tests](https://img.shields.io/badge/tests-44%20passing-brightgreen.svg?style=flat-square)](tests/)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D22-339933.svg?style=flat-square)](package.json)
+[![format](https://img.shields.io/badge/patch%20text-Google%20DMP-6f42c1.svg?style=flat-square)](https://github.com/google/diff-match-patch)
 
 **A hardened fork of `@sanity/diff-match-patch`, with patch coordinates that match JavaScript string indices.**
 
-[Install](#install) · [Usage](#usage) · [API](#api) · [Contracts](#coordinate-and-format-contracts) · [Performance](#recorded-performance)
+[Features](#what-it-adds) · [Measured performance](#measured-performance) · [Install](#install) · [Usage](#usage) · [Contracts](#coordinate-and-format-contracts)
 
 </div>
 
@@ -21,16 +22,44 @@
 
 `diff-match-patch` and its TypeScript fork `@sanity/diff-match-patch` express patch coordinates as **UTF-8 byte offsets**. JavaScript strings are indexed in **UTF-16 code units**. The Sanity fork bridged the two with a byte-counting and index-translation layer that runs on every patch operation, and that layer is where the recorded failures come from: patch offset clamping on long multi-hunk files, cumulative drift on large JSON documents, and `Failed to determine byte offset` exceptions on astral text.
 
-`textdiffnext` removes that layer. Patch objects, patch text, and the public API all speak UTF-16 code-unit coordinates — the same units as `string.prototype.length` and `slice()`.
+`textdiffnext` removes that layer. Patch objects, patch text, and the public API all speak UTF-16 code-unit coordinates — the same units as `string.length` and `slice()`.
 
 | Problem | What this package does |
 | --- | --- |
 | Patch coordinates drift from JavaScript string indices | Coordinates are UTF-16 code units end to end; no byte-to-code-unit translation runs during make, apply, or serialize. |
 | Lone surrogate halves crash `encodeURI` during patch serialization | Isolated surrogate code units are emitted as `%uXXXX` and parsed back losslessly. |
 | Applying a patch to shifted text silently clamps or corrupts | Bitap fuzzy matching works on code-unit positions; the recorded 45 KB and 40 KB corruption cases reconstruct exactly. |
-| Patch text must interoperate with existing tooling | The wire format is Google DMP patch text (`patch_toText` / `patch_fromText`), including `@@ -start,length +start,length @@` headers. |
+| Patch text must interoperate with existing tooling | The wire format is Google DMP patch text (`stringifyPatches` / `parsePatch`), including `@@ -start,length +start,length @@` headers. |
 
-This is a fork, not a rewrite of the algorithm: the Myers bisect, semantic cleanup, and Bitap matcher are the upstream implementations. What changed is the coordinate model and the Unicode hardening around it.
+## What it adds
+
+- **One coordinate model:** `Patch` exposes `start1`, `start2`, `length1`, and `length2` as zero-based UTF-16 code units, in patch objects and in patch text.
+- **Unicode hardening:** isolated surrogate halves round-trip as `%uXXXX` instead of throwing in `encodeURI`.
+- **Fuzzy application that respects the model:** the Bitap matcher works at code-unit positions, so a shifted target is found by search rather than by index arithmetic.
+- **Google DMP wire format:** patch text stays interoperable with existing diff-match-patch tooling.
+- **Upstream algorithm, unchanged:** the Myers bisect, semantic cleanup, and Bitap matcher are the upstream implementations. What changed is the coordinate model and the Unicode handling around it.
+- **No runtime dependencies:** ESM, CommonJS, and TypeScript declarations.
+
+This is a fork, not a rewrite. It does not add a new diff algorithm, and it does not convert Sanity byte-coordinate patches for you — a byte-coordinate patch needs an explicit conversion based on the original source text. Patch text containing split surrogates is not Google-compatible, because Google DMP rejects the `%uXXXX` extension.
+
+## Architecture
+
+<img src="assets/architecture.svg" alt="textdiffnext pipeline: source text, UTF-16 coordinate model, diff, apply, and wire format" width="100%">
+
+## Measured performance
+
+The repository benchmark log records one exploratory run on a single machine (macOS arm64, Bun 1.4.4) using the full patch pipeline (`makePatches` + `applyPatches`) on a 45 KB multi-hunk TypeScript file:
+
+| Implementation | p50 | p95 |
+| --- | ---: | ---: |
+| `textdiffnext` | **7.12 ms** | **19.91 ms** |
+| `@sanity/diff-match-patch` 3.2.1 | 8.64 ms | 23.92 ms |
+
+The same run recorded exact reconstruction on all 15 corpus scenarios, where the Sanity fork corrupted the 45 KB code and 40 KB JSON cases and threw on astral-heavy text. Correctness, not speed, is the reason to use this package; the timing difference is a secondary observation from one run with warm-up discarded.
+
+![Full patch pipeline timing](assets/benchmark.svg)
+
+These are single-machine, single-run figures. They are not a throughput guarantee and have no confidence intervals. See [BENCHMARK-RESULTS.md](BENCHMARK-RESULTS.md) and [REGRESSION-RESULTS.md](REGRESSION-RESULTS.md).
 
 ## Install
 
@@ -97,17 +126,6 @@ const [result, applied] = applyPatches(patches, 'header line\naaaa\nbbbb\ncccc')
 
 Details and tested limits: [API-COMPATIBILITY.md](API-COMPATIBILITY.md) and [UNICODE-SERIALIZATION-CONTRACT.md](UNICODE-SERIALIZATION-CONTRACT.md).
 
-## Recorded performance
-
-The repository benchmark log records one exploratory run on a single machine (macOS arm64, Bun 1.4.4) using the full patch pipeline (`makePatches` + `applyPatches`) on a 45 KB multi-hunk TypeScript file:
-
-| Implementation | p50 | p95 |
-| --- | ---: | ---: |
-| `textdiffnext` | 7.12 ms | 19.91 ms |
-| `@sanity/diff-match-patch` 3.2.1 | 8.64 ms | 23.92 ms |
-
-That run also recorded exact reconstruction on all 15 corpus scenarios, where the Sanity fork corrupted the 45 KB code and 40 KB JSON cases and threw on astral-heavy text. These are single-machine, single-run figures with warm-up discarded; they are not a throughput guarantee. See [BENCHMARK-RESULTS.md](https://github.com/2tsoftwareapp/textdiffnext/blob/main/BENCHMARK-RESULTS.md) and [REGRESSION-RESULTS.md](https://github.com/2tsoftwareapp/textdiffnext/blob/main/REGRESSION-RESULTS.md).
-
 ## Development
 
 ```sh
@@ -121,8 +139,8 @@ The build requires Bun 1.4.4 or later; earlier Bun releases do not resolve `.js`
 
 ## Research artifacts
 
-The feasibility study behind this fork — upstream snapshots, issue reproductions, Unicode semantics, competitor matrix, algorithm evaluation, and architecture options — is indexed in [research/README.md](https://github.com/2tsoftwareapp/textdiffnext/blob/main/research/README.md). Those documents are engineering records, not package documentation.
+The feasibility study behind this fork — upstream snapshots, issue reproductions, Unicode semantics, competitor matrix, algorithm evaluation, and architecture options — is indexed in [research/README.md](research/README.md). Those documents are engineering records, not package documentation.
 
-## License
+## Changelog and license
 
-Apache-2.0. Derived from [`@sanity/diff-match-patch`](https://github.com/sanity-io/diff-match-patch) 3.2.1, itself a TypeScript fork of [Google diff-match-patch](https://github.com/google/diff-match-patch). Upstream attribution is in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+See [CHANGELOG.md](CHANGELOG.md). Licensed under [Apache-2.0](LICENSE). Derived from [`@sanity/diff-match-patch`](https://github.com/sanity-io/diff-match-patch) 3.2.1, itself a TypeScript fork of [Google diff-match-patch](https://github.com/google/diff-match-patch). Upstream attribution is in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
